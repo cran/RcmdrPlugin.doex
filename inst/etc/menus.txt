@@ -1,0 +1,30 @@
+# Some Rcmdr menus for the epack package
+# When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
+
+# last modified: 10  August 2009 by Erin Hodgess
+
+#   type    menu/item      operation/parent  label                              command/menu                activation    install?
+menu    aovMenu       topMenu         ""                                      ""                          ""                      "" 
+
+ item    aovMenu       command         "Bartlett Test"                           bartlett               "numericP() && factorsP()"          ""
+
+
+    item    aovMenu       command         "Randomized Block Design ANOVA..."                            ranblockAnova               "numericP() && factorsP()"          ""
+
+   item    aovMenu       command         "Latin Squares Design ANOVA..."                            LatinAnova               "numericP() && factorsP()"     ""
+
+
+ item    aovMenu       command         "Graeco-Latin Squares Design ANOVA..."                            GreekAnova               "numericP() && factorsP()"     ""
+
+item    aovMenu       command         "Two Factor Factorial Design"                            factorialAnova               "numericP() && factorsP()"     ""
+
+item    aovMenu       command         "Two k Factor Factorial Design"                            twokfactorialAnova               "numericP() && factorsP()"     ""
+
+item    topMenu         cascade         "DOE Stat 4309"                                 aovMenu                   ""                      "packageAvailable('multcomp')"
+
+ 
+
+
+
+
+
